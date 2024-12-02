@@ -1,7 +1,7 @@
 // sum.test.js
 import { expect, test } from 'vitest'
 
-//Test example
+//Testing example
 function sum(a, b) {
     return a + b
   }
