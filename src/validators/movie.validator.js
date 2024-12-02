@@ -2,7 +2,7 @@ const { param, body } = require("express-validator");
 
 const createMovieValidator = [
   body('title')
-    .isString().withMessage("title should be a string")
+    .isString().withMessage("El titulo debe ser un string")
     .trim()
     .isLength({ min: 2 }).withMessage("title should have at least 2 characters"),
 
