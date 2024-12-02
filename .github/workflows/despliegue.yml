@@ -4,7 +4,7 @@ on:
     branches: ["main"]
 jobs:
   test-code:
-    name: Correr test
+    name: Testing
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -21,7 +21,7 @@ jobs:
       - name: Correr tests
         run: npm test
   deploy:
-    name: Despliegue a EC2
+    name: Deploy to EC2
     runs-on: self-hosted
     needs: [test-code]
     steps:
