@@ -1,7 +1,6 @@
 services:
   api:
     build: .
-    container_name: nodejs-api
     ports:
       - "3000:3000"
     environment:
@@ -13,7 +12,6 @@ services:
 
   mongo:
     image: mongo:latest
-    container_name: mongo
     ports:
       - '27017:27017'
     volumes:

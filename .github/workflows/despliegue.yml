@@ -1,0 +1,19 @@
+name: Despliegue a servidor
+
+on:
+  push:
+    branches: ["main"]
+      
+jobs:
+  deploy:
+    name: Despliegue a EC2
+    runs-on: self-hosted
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      
+      - name: Remove Existing Containers
+        run: docker compose down
+
+      - name: Build Image and deploy
+        run: docker compose up --build -d
